@@ -1,5 +1,5 @@
-let canvasWidth = 700;
-let canvasHeight = 700;
+let canvasWidth = 1000;
+let canvasHeight = 800;
 
 let poziceHraceX = 0;
 let poziceHraceY = canvasHeight / 9 * 7;
@@ -22,7 +22,7 @@ let vyskaNepratele = canvasHeight / 20;
 let poziceNepratel = new Array(30);
 let rychlostNepratel = 0.3;
 
-let score = 0;
+let score = 1;
 
 for (let i = 0; i < poziceNepratel.length; i++) {
     poziceNepratel[i] = [(i % 10) * (sirkaNepratele * 1.7),
@@ -80,7 +80,7 @@ function vystrelProjektilHrace() {
 
 function nakresliNepratele() {
     for (let i = 0; i < poziceNepratel.length; i++) {
-        fill("blue");
+        fill("purple");
         rect(poziceNepratel[i][0], poziceNepratel[i][1], sirkaNepratele, vyskaNepratele);
     }
 }
